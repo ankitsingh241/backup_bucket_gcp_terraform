@@ -1,5 +1,5 @@
 resource "google_storage_bucket" "multi_bucket" {
-  bucket          = var.bucket_name
+  name          = var.bucket_name[count.index]
   location      = "asia-south1"
   project       = var.projectid
   count         = length(var.bucket_name)
