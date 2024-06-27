@@ -4,6 +4,6 @@ variable "projectid" {
 }
 
 variable "bucket_name" {
-    type = list()
+    type = list
     default = ["gcp_bucket", "backup_gcp_bucket"]
 }
