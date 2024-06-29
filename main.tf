@@ -3,4 +3,5 @@ resource "google_storage_bucket" "multi_bucket" {
   location      = "asia-south1"
   project       = var.projectid
   count         = length(var.bucket_name)
+  force_destroy = true
 }
